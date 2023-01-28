@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/*FONTS*/
+/* Configuramos la tipografía para toda la web */
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  font-size: 100%;
+  max-width: 1440px;
+  background: white;
+  font-family: Verdana;
+}
+
+/*
+<body>
+<div class="container">
+    <h1 class="container__title">CHUCK NORRIS JOKES</h1>
+    <p class="container__text">Select the type of jokes you want:</p>
+    <div class="container__box">
+        <div class="container__basic-btn"></div>
+    </div>
+</div>    
+
+<div class="joke">
+    <img class="joke__img" src="./assets/chuck.png" alt="Chuck Norris img">
+    <p class="joke__text"></p>
+</div>
+</body>
+
+*/
+.container {
+  margin: 50px auto;
+  width: 95%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.container__title {
+  font-size: 20px;
+  font-weight: bold;
+  width: 95%;
+  background-color: #FFD0B3;
+  color: #EF631A;
+  padding: 50px 20px;
+  margin: 50px 0 25px 0;
+  align-self: auto;
+  max-width: 350px;
+  text-align: center;
+}
+.container__text {
+  color: #000000;
+  font-size: 18px;
+  margin: 25px 0 50px 0;
+  text-align: center;
+}
+.container__box {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+.container__btn {
+  color: #A0A0A0;
+  font-size: 18px;
+  margin: 5px;
+  border: 1px solid #A0A0A0;
+  padding: 5px;
+}
+.container__btn--select {
+  color: #000000;
+  font-size: 18px;
+  margin: 5px;
+  border: 1px solid #EF631A;
+  background-color: #FFD0B3;
+  padding: 5px;
+}
+.container__basic-btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+.container__btn-send {
+  background-color: #FFD0B3;
+  color: #ffffff;
+  border: none;
+}
+.container__btn-reset {
+  background-color: #FFF8F4;
+  color: #FFD0B3;
+  border: none;
+}
+
+.joke {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.joke__text {
+  font-size: 20px;
+  color: #EF631A;
+  padding: 10px;
+  text-align: center;
+}
+.joke__img {
+  width: 240px;
+}/*# sourceMappingURL=style.css.map */
